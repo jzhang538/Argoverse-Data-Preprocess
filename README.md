@@ -1,5 +1,5 @@
 #  Code for Data Preprocessing of Argoverse Dataset
--> Also official data preprocessing for paper "Multimodal Motion Prediction with Stacked Transformers. (CVPR 2021)"
+-> Also official data preprocessing for paper ["Multimodal Motion Prediction with Stacked Transformers. (CVPR 2021)"](https://github.com/decisionforce/mmTransformer)
 
 ## Usage
 
@@ -26,7 +26,7 @@
     ```
     $ python compute_feature_module.py
     ```
-## Result intermediate data (per case)
+## Result Intermediate Data (Per Case)
 
 "AGENT_FEATURE": 
 
