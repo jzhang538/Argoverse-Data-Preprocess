@@ -1,5 +1,6 @@
 #  Code for Data Preprocessing of Argoverse Dataset
 -> Also official data preprocessing for paper ["Multimodal Motion Prediction with Stacked Transformers. (CVPR 2021)"](https://github.com/decisionforce/mmTransformer)
+-> The code is modified from [this repository](https://github.com/xk-huang/yet-another-vectornet). Install the same dependencies.
 
 ## Usage
 
