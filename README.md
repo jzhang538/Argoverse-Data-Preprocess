@@ -31,3 +31,7 @@
 Data format
 
 ![img](./format.jpg)
+
+## Note!
+
+We do not do any data augumentation (e.g. rotation) here to normalize the scene. The preprocessing code is to derive informative intermediate data from Argoverse API (without any transform).

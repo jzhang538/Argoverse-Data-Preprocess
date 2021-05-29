@@ -33,6 +33,10 @@ def compute_feature_for_one_seq(traj_df: pd.DataFrame, am: ArgoverseMap, obs_len
             list of (list of nearby agent feature)
         lane_feature_ls:
             list of (list of lane segment feature)
+        candidate_centerlines:
+            list of candidate centerlines (useless)
+        candidate_lane_seqs:
+            useless
         norm_center np.ndarray: (2, )
     """
     # normalize timestamps
@@ -91,7 +95,7 @@ def compute_feature_for_one_seq(traj_df: pd.DataFrame, am: ArgoverseMap, obs_len
 
 def trans_gt_offset_format(gt):
     """
-    >Our predicted trajectories are parameterized as per-stepcoordinate offsets, starting from the last observed location.We rotate the coordinate system based on the heading of the target vehicle at the last observed location.
+    >Our predicted trajectories are parameterized as per-stepcoordinate offsets, starting from the last observed location.
     """
     assert gt.shape == (30, 2) or gt.shape == (0, 2), f"{gt.shape} is wrong"
     # for test, no gt, just return a (0, 2) ndarray
@@ -199,6 +203,7 @@ def encoding_features(agent_feature, obj_feature_ls, lane_feature_ls, candidate_
 
             nbr_lane_nd.append([p_ls, s_ls, adj_ls])
 
+    # If you want to use lane information where end point locates, save it as well
     # # ep_lane_ids, ep_nearby_lane_ids
     # ep_lane_orders = []
     # flag = False
@@ -220,7 +225,7 @@ def encoding_features(agent_feature, obj_feature_ls, lane_feature_ls, candidate_
     # ep_nearby_lane_orders = np.array(ep_nearby_lane_orders)
     # print(ep_nearby_lane_orders)
 
-
+    # If you want to use candidate centerlines, save them as well
     # ct = 0
     # cand_id2order_seq = {}
     # # candidate line mask
