@@ -114,18 +114,12 @@ def encoding_features(agent_feature, obj_feature_ls, lane_feature_ls, candidate_
             list of list of (xys, ts, mask, track_id, gt_xys, gt_mask)
         lane_feature_ls:
             list of list of lane a segment feature, centerline, lane_info1, lane_info2, lane_id
+        candidate_centerlines:
+            useless
+        candidate_lane_seqs:
+            useless 
     returns:
-        pd.DataFrame of (
-            polyline_features: vstack[
-                (xs, ys, xe, ye, timestamp, NULL, NULL, polyline_id),
-                (xs, ys, xe, ye, NULL, zs, ze, polyline_id)
-                ]
-            offset_gt: incremental offset from agent's last obseved point,
-            traj_id2mask: Dict[int, int]
-            lane_id2mask: Dict[int, int]
-        )
-        where obejct_type = {0 - others, 1 - agent}
-
+        pd.DataFrame
     """
     gt = agent_feature[-1]
     nbrs_nd = np.empty((0,4))
