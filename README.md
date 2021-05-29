@@ -28,16 +28,6 @@
     ```
 ## Result Intermediate Data (Per Case)
 
-"AGENT_FEATURE": [20, 5] # x, y, timestamp, mask, agent_id
+Data format
 
-"GT": [30,2] # x, y 
-
-"NBRS_FEATURE": [num_neighbors, 20, 5] # x, y, timestamp, mask, agent_id
-
-"NBRS_GT": [num_neighbors, 30, 3] # x, y, mask
-
-"LANES_FEATURE": [num_vectors, 7] # point1_xy, point2_xy, is_intersection, turn_direction, is_traffic_control, 
-
-"LANES_MASK": [num_lanes, 2] # each lane_id -> start and end index of lane vectors in LANES_FEATURE
-
-"LANES_NBRS": [list of predecessor ids, list of sucessor ids, list of adjacent ids] # id -> lane_id in LANES_MASK
+![img](./format.jpg)
