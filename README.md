@@ -1,6 +1,8 @@
 #  Code for Data Preprocessing of Argoverse Dataset
 -> Also official data preprocessing for paper ["Multimodal Motion Prediction with Stacked Transformers. (CVPR 2021)"](https://github.com/decisionforce/mmTransformer)
 
+-> The preprocessing code is modified from [this repository](https://github.com/xk-huang/yet-another-vectornet). Ensure the same dependencies.
+
 ## Usage
 
 0) Install [Argoverse-api](https://github.com/argoai/argoverse-api/tree/master/argoverse). Download `HD-maps` in argoverse-api as instructed.
